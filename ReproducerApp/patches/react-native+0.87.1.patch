@@ -1,0 +1,62 @@
+diff --git a/node_modules/react-native/React/Fabric/Mounting/ComponentViews/View/RCTViewComponentView.mm b/node_modules/react-native/React/Fabric/Mounting/ComponentViews/View/RCTViewComponentView.mm
+index 5571b53..28aad3f 100644
+--- a/node_modules/react-native/React/Fabric/Mounting/ComponentViews/View/RCTViewComponentView.mm
++++ b/node_modules/react-native/React/Fabric/Mounting/ComponentViews/View/RCTViewComponentView.mm
+@@ -37,6 +37,16 @@
+ 
+ const CGFloat BACKGROUND_COLOR_ZPOSITION = -1024.0f;
+ 
++// [repro] Echo the token the app writes, so the app can tell this patch is compiled in.
++static void ReproEchoToken()
++{
++  NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
++  NSString *token = [defaults stringForKey:@"ReproToken"];
++  if (token != nil && ![token isEqualToString:[defaults stringForKey:@"ReproTokenEcho"]]) {
++    [defaults setObject:token forKey:@"ReproTokenEcho"];
++  }
++}
++
+ @implementation RCTViewComponentView {
+   UIColor *_backgroundColor;
+   CALayer *_backgroundColorLayer;
+@@ -289,7 +299,24 @@ - (void)updateProps:(const Props::Shared &)props oldProps:(const Props::Shared &
+ 
+   // Disable `removeClippedSubviews` when Fabric View Culling is enabled.
+   if (!ReactNativeFeatureFlags::enableViewCulling()) {
+-    if (oldViewProps.removeClippedSubviews != newViewProps.removeClippedSubviews) {
++    // [repro] Runtime switch, set from JS with Settings.set({ReproRecycleFix}).
++    // Stock compares against `_props`, which `prepareForRecycle` keeps. The fix
++    // compares against `_removeClippedSubviews`, which `prepareForRecycle` resets.
++    BOOL reproFix = [[NSUserDefaults standardUserDefaults] boolForKey:@"ReproRecycleFix"];
++    bool reproCurrent = reproFix ? (bool)_removeClippedSubviews : oldViewProps.removeClippedSubviews;
++    if (newViewProps.removeClippedSubviews || reproCurrent) {
++      ReproEchoToken();
++      NSLog(
++          @"[clip] %@ %p updateProps (%@): removeClippedSubviews=%d, _props says %d, ivar is %d -> %@",
++          NSStringFromClass([self class]),
++          self,
++          reproFix ? @"fix" : @"stock",
++          (int)newViewProps.removeClippedSubviews,
++          (int)oldViewProps.removeClippedSubviews,
++          (int)_removeClippedSubviews,
++          reproCurrent != newViewProps.removeClippedSubviews ? @"toggle" : @"no change");
++    }
++    if (reproCurrent != newViewProps.removeClippedSubviews) {
+       _removeClippedSubviews = newViewProps.removeClippedSubviews;
+       [self _updateRemoveClippedSubviewsState];
+     }
+@@ -720,6 +747,14 @@ - (void)prepareForRecycle
+   _propKeysManagedByAnimated_DO_NOT_USE_THIS_IS_BROKEN = nil;
+   _eventEmitter.reset();
+   _isJSResponder = NO;
++  if (props.removeClippedSubviews || _removeClippedSubviews) {
++    NSLog(
++        @"[clip] %@ %p prepareForRecycle: ivar %d -> 0, _props keeps removeClippedSubviews=%d",
++        NSStringFromClass([self class]),
++        self,
++        (int)_removeClippedSubviews,
++        (int)props.removeClippedSubviews);
++  }
+   _removeClippedSubviews = NO;
+   _reactSubviews = [NSMutableArray new];
+   _layoutMetrics = {};
