@@ -1,0 +1,34 @@
+2026-10-07 16:43:13.046 [clip] native state: none
+2026-10-07 16:43:13.225 [clip] RCTViewComponentView 0x10825b300 updateProps (stock): removeClippedSubviews=1, _props says 0, ivar is 0 -> toggle
+2026-10-07 16:43:13.227 [clip] RCTScrollViewComponentView 0x1021bd800 updateProps (stock): removeClippedSubviews=1, _props says 0, ivar is 0 -> toggle
+2026-10-07 16:43:13.246 [clip] native state: {"view":"0x000000010825b300","clip":true,"attached":7,"tracked":100}
+2026-10-07 16:43:41.855 [clip] RCTViewComponentView 0x10825b300 prepareForRecycle: ivar 1 -> 0, _props keeps removeClippedSubviews=1
+2026-10-07 16:43:41.856 [clip] RCTScrollViewComponentView 0x1021bd800 prepareForRecycle: ivar 1 -> 0, _props keeps removeClippedSubviews=1
+2026-10-07 16:43:41.946 [clip] native state: none
+2026-10-07 16:43:42.193 [clip] RCTViewComponentView 0x10825b300 updateProps (stock): removeClippedSubviews=1, _props says 1, ivar is 0 -> no change
+2026-10-07 16:43:42.193 [clip] RCTScrollViewComponentView 0x1021bd800 updateProps (stock): removeClippedSubviews=1, _props says 1, ivar is 0 -> no change
+2026-10-07 16:43:42.245 [clip] native state: {"view":"0x000000010825b300","clip":false,"attached":100,"tracked":0}
+2026-10-07 16:43:44.406 [clip] RCTViewComponentView 0x10825b300 prepareForRecycle: ivar 0 -> 0, _props keeps removeClippedSubviews=1
+2026-10-07 16:43:44.406 [clip] RCTScrollViewComponentView 0x1021bd800 prepareForRecycle: ivar 0 -> 0, _props keeps removeClippedSubviews=1
+2026-10-07 16:43:44.446 [clip] native state: none
+2026-10-07 16:43:44.746 [clip] RCTViewComponentView 0x10825b300 updateProps (stock): removeClippedSubviews=1, _props says 1, ivar is 0 -> no change
+2026-10-07 16:43:44.747 [clip] RCTScrollViewComponentView 0x1021bd800 updateProps (stock): removeClippedSubviews=1, _props says 1, ivar is 0 -> no change
+2026-10-07 16:43:44.756 [clip] native state: {"view":"0x000000010825b300","clip":false,"attached":100,"tracked":0}
+2026-10-07 16:43:48.507 [clip] RCTViewComponentView 0x10825b300 prepareForRecycle: ivar 0 -> 0, _props keeps removeClippedSubviews=1
+2026-10-07 16:43:48.507 [clip] RCTScrollViewComponentView 0x1021bd800 prepareForRecycle: ivar 0 -> 0, _props keeps removeClippedSubviews=1
+2026-10-07 16:43:48.545 [clip] native state: none
+2026-10-07 16:43:48.864 [clip] RCTViewComponentView 0x10825b300 updateProps (fix): removeClippedSubviews=1, _props says 1, ivar is 0 -> toggle
+2026-10-07 16:43:48.864 [clip] RCTScrollViewComponentView 0x1021bd800 updateProps (fix): removeClippedSubviews=1, _props says 1, ivar is 0 -> toggle
+2026-10-07 16:43:48.946 [clip] native state: {"view":"0x000000010825b300","clip":true,"attached":7,"tracked":100}
+2026-10-07 16:43:51.070 [clip] RCTViewComponentView 0x10825b300 prepareForRecycle: ivar 1 -> 0, _props keeps removeClippedSubviews=1
+2026-10-07 16:43:51.070 [clip] RCTScrollViewComponentView 0x1021bd800 prepareForRecycle: ivar 1 -> 0, _props keeps removeClippedSubviews=1
+2026-10-07 16:43:51.146 [clip] native state: none
+2026-10-07 16:43:51.412 [clip] RCTViewComponentView 0x10825b300 updateProps (fix): removeClippedSubviews=1, _props says 1, ivar is 0 -> toggle
+2026-10-07 16:43:51.412 [clip] RCTScrollViewComponentView 0x1021bd800 updateProps (fix): removeClippedSubviews=1, _props says 1, ivar is 0 -> toggle
+2026-10-07 16:43:51.446 [clip] native state: {"view":"0x000000010825b300","clip":true,"attached":7,"tracked":100}
+2026-10-07 16:43:55.176 [clip] RCTViewComponentView 0x10825b300 prepareForRecycle: ivar 1 -> 0, _props keeps removeClippedSubviews=1
+2026-10-07 16:43:55.177 [clip] RCTScrollViewComponentView 0x1021bd800 prepareForRecycle: ivar 1 -> 0, _props keeps removeClippedSubviews=1
+2026-10-07 16:43:55.246 [clip] native state: none
+2026-10-07 16:43:55.513 [clip] RCTViewComponentView 0x10825b300 updateProps (stock): removeClippedSubviews=1, _props says 1, ivar is 0 -> no change
+2026-10-07 16:43:55.513 [clip] RCTScrollViewComponentView 0x1021bd800 updateProps (stock): removeClippedSubviews=1, _props says 1, ivar is 0 -> no change
+2026-10-07 16:43:55.546 [clip] native state: {"view":"0x000000010825b300","clip":false,"attached":100,"tracked":0}

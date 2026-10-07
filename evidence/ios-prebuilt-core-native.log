@@ -1,0 +1,8 @@
+2026-10-07 16:46:40.652 [clip] native state: none
+2026-10-07 16:46:40.947 [clip] native state: {"view":"0x000000010626f300","clip":true,"attached":7,"tracked":100}
+2026-10-07 16:46:50.847 [clip] native state: none
+2026-10-07 16:46:51.246 [clip] native state: {"view":"0x000000010626f300","clip":false,"attached":100,"tracked":0}
+2026-10-07 16:46:54.448 [clip] native state: none
+2026-10-07 16:46:54.846 [clip] native state: {"view":"0x000000010626f300","clip":false,"attached":100,"tracked":0}
+2026-10-07 16:46:57.046 [clip] native state: none
+2026-10-07 16:46:57.446 [clip] native state: {"view":"0x000000010626f300","clip":false,"attached":100,"tracked":0}

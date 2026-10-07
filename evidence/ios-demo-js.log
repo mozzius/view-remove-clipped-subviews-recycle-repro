@@ -1,0 +1,17 @@
+2026-10-07T13:43:41.843Z [repro] unmount
+2026-10-07T13:43:42.149Z [repro] mount
+2026-10-07T13:43:43.000Z [repro] mount 2 (stock): 0x5b300 (=#1) clipping OFF, 100/100 attached
+2026-10-07T13:43:44.393Z [repro] unmount
+2026-10-07T13:43:44.699Z [repro] mount
+2026-10-07T13:43:45.550Z [repro] mount 3 (stock): 0x5b300 (=#1) clipping OFF, 100/100 attached
+2026-10-07T13:43:46.951Z [repro] mode fix
+2026-10-07T13:43:48.500Z [repro] unmount
+2026-10-07T13:43:48.816Z [repro] mount
+2026-10-07T13:43:49.667Z [repro] mount 4 (fix): 0x5b300 (=#1) clipping on, 7/100 attached
+2026-10-07T13:43:51.057Z [repro] unmount
+2026-10-07T13:43:51.366Z [repro] mount
+2026-10-07T13:43:52.217Z [repro] mount 5 (fix): 0x5b300 (=#1) clipping on, 7/100 attached
+2026-10-07T13:43:53.610Z [repro] mode stock
+2026-10-07T13:43:55.164Z [repro] unmount
+2026-10-07T13:43:55.465Z [repro] mount
+2026-10-07T13:43:56.316Z [repro] mount 6 (stock): 0x5b300 (=#1) clipping OFF, 100/100 attached
