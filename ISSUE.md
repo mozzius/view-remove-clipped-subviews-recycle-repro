@@ -23,7 +23,7 @@ if (oldViewProps.removeClippedSubviews != newViewProps.removeClippedSubviews) {
 
 #### Fix
 
-Compare against `_removeClippedSubviews` rather than `_props`. PR to follow.
+Compare against `_removeClippedSubviews` rather than `_props`: #58915.
 
 ### Steps to reproduce
 

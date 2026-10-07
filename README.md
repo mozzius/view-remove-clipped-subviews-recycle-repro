@@ -19,7 +19,7 @@ diffs the new props against `_props`, so it sees no change in
 `removeClippedSubviews` and never turns the flag back on.
 [`ISSUE.md`](ISSUE.md) has the details.
 
-- **Upstream issue:** not filed yet
+- **Upstream issue:** [react/react-native#58914](https://github.com/react/react-native/issues/58914). Fix: [#58915](https://github.com/react/react-native/pull/58915)
 - **Found while building:** [scrollview-mvcp-anchor-repro](https://github.com/mozzius/scrollview-mvcp-anchor-repro)
   (see its "Other findings")
 
